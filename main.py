@@ -6,7 +6,7 @@ async def ensure_browsers():
         # This downloads browsers if missing
         await p.chromium.launch(headless=True)
 
-asyncio.run(ensure_browsers())
+
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
