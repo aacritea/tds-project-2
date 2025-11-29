@@ -4,8 +4,8 @@ from solver.quiz_solver import solve_quiz
 
 app = FastAPI()
 
-STORED_EMAIL = "your_email_here"
-STORED_SECRET = "your_secret_here"
+STORED_EMAIL = "23f3003343@ds.study.iitm.ac.in"
+STORED_SECRET = "classifiedInfo11"
 
 class QuizRequest(BaseModel):
     email: str
