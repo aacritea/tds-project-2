@@ -1,3 +1,13 @@
+import asyncio
+from playwright.async_api import async_playwright
+
+async def ensure_browsers():
+    async with async_playwright() as p:
+        # This downloads browsers if missing
+        await p.chromium.launch(headless=True)
+
+asyncio.run(ensure_browsers())
+
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from solver.quiz_solver import solve_quiz
